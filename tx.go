@@ -42,7 +42,7 @@ func ParseTxCmd(cdc *codec.Codec) *cobra.Command {
 					return err
 				}
 
-				fmt.Printf("tx%d, %+v\n", k, tx)
+				fmt.Printf("tx%d, %s, %+v\n", k,tx.GetMsgs()[0].Type(), tx)
 			}
 
 			return nil
